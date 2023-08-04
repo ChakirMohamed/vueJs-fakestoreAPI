@@ -36,11 +36,7 @@ export default {
     products(){
       return this.$store.getters['productsModule/getProducts']
     },
-    productImageUrl() {
-      // You can perform any logic here to determine the image URL based on the product data.
-      // For example, you can concatenate the base URL with the product image name or ID.
-      return 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg';
-    }
+    
   }
   ,
   created(){

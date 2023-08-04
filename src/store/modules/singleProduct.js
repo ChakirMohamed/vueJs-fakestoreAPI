@@ -15,12 +15,12 @@ const mutations = {
 
 const actions = {
 
-    fetchProduct({commit},id){
+    fetchProduct(context,id){
         axios.get(`${process.env.VUE_APP_API_BASE_URL}products/${id}`)
         .then(
             (response)=>{
                 
-                commit('SET_PROPDUCT',response.data);
+                context.commit('SET_PROPDUCT',response.data);
             }
         )
         .catch(
@@ -30,6 +30,7 @@ const actions = {
 }
 
 export default{
+    namespaced: true,
     state,
     mutations,
     actions,

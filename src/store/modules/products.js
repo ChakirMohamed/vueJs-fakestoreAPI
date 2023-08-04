@@ -16,7 +16,7 @@ const actions = {
         axios.get(`${process.env.VUE_APP_API_BASE_URL}products`)
         .then((response)=>{
             commit('SET_PRODUCTS',response.data);
-            console.log(response.data)
+            //console.log(response.data)
         }
         )
         .catch((error)=>console.error(error))
