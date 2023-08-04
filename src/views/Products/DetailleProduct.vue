@@ -4,6 +4,10 @@
 
 <script>
 export default {
-    name: "DetailleProduct"
+    name: "DetailleProduct",
+
+    created(){
+        this.$store.dispath['singleProductModule/fetchProduct']
+    }
 }
 </script>
