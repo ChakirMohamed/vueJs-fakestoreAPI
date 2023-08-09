@@ -1,7 +1,7 @@
 <template >
-    <div class="row pb-5" v-if="product">
+    <div class="row py-5" v-if="product">
         <div class="col-md-6">
-            <div class="overview-product border" style="overflow: hidden;">
+            <div class="overview-product border p-3" style="overflow: hidden;">
                 <img :src="product.image" alt="" class="img-fluid">
 
             </div>
