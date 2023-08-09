@@ -14,7 +14,7 @@
     </div>
 
     <div class="d-flex align-items-center pr-2">
-        <a @click="showCard" class="icon-clicked"><font-awesome-icon icon="fa-solid fa-shopping-cart" /></a> 
+        <router-link to="/cart" class="icon-clicked"><font-awesome-icon icon="fa-solid fa-shopping-cart" /></router-link> 
 
       </div>
   </nav>
@@ -24,13 +24,9 @@
 
 <script>
 export default {
-  name: 'AppHeader'
-  ,
-  methods:{
-    showCard(){
-      alert("hiii")
-    }
-  }
+  name: 'AppHeader',
+  
+  
 }
 </script>
 

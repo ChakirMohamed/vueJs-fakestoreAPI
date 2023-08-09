@@ -17,9 +17,21 @@ const routes = [
         path:'/detail-product/:id',
         name:'detailProduct',
         component:()=>import('../views/Products/DetailleProduct.vue')
+      },
+      {
+        path:'/cart',
+        component:()=>import('../views/cart/CartUser.vue')
       }
     ]
   },
+  {
+    path:"/login",
+    component:()=>import('../views/login/LoginUser.vue')
+  },
+
+
+
+
   {
     path: '/about',
     name: 'about',
