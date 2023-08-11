@@ -5,7 +5,7 @@
 
   <div>
     <div class="row">
-      <ListItemProduct class="col-md-4 col-sm-6" v-for="product in products" :title="product.title" :price="product.price" :imgUrl='product.image'  :id='Number(product.id)'/>
+      <ListItemProduct class="col-md-4 col-sm-6" v-for="product in getProducts" :title="product.title" :price="product.price" :imgUrl='product.image'  :id='Number(product.id)'/>
 
     </div>
   </div>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import ListItemProduct from './ListItemProduct.vue';
 
 
@@ -33,9 +34,11 @@ export default {
   },
   computed: {
    
-    products(){
-      return this.$store.getters['productsModule/getProducts']
-    },
+    // products(){
+    //   return this.$store.getters['productsModule/getProducts']
+    // },
+    ...mapGetters('productsModule',['getProducts']),
+    ...mapGetters('categoriesModule',['getAllCategories']),
     
   }
   ,

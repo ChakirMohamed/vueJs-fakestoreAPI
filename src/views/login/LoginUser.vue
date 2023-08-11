@@ -40,8 +40,12 @@ export default {
             try {
                 
             const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}auth/login`, { username: this.username, password: this.password });
-                alert(response.data.token)
+                //alert(response.data.token)
                 //alert(`${process.env.VUE_APP_API_BASE_URL}login`)
+                const token = response.data.token;
+                localStorage.setItem('token',token)
+                //console.log(response.data)
+                this.$router.push("/")
             }
             catch{
                 alert()

@@ -28,12 +28,12 @@ export default {
     name: "DetailleProduct",
     computed: {
         product() {
-            return this.$store.getters['singleProductModule/getProduct']
+            return this.$store.getters['productsModule/getProduct']
         }
     },
 
     created() {
-        this.$store.dispatch('singleProductModule/fetchProduct', this.$route.params.id)
+        this.$store.dispatch('productsModule/fetchProduct', this.$route.params.id)
     }
 }
 </script>

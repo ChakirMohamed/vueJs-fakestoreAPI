@@ -1,12 +1,14 @@
 import axios from "axios";
 
 const state = {
-    products:[]
+    products:[],
+    product:{}
 };
 
 const getters = {
 
     getProducts:(state)=>state.products,
+    getProduct:(state)=>state.product,
 }
 
 const actions = {
@@ -20,7 +22,19 @@ const actions = {
         }
         )
         .catch((error)=>console.error(error))
-    }
+    },
+    fetchProduct(context,id){
+        axios.get(`${process.env.VUE_APP_API_BASE_URL}products/${id}`)
+        .then(
+            (response)=>{
+                
+                context.commit('SET_PROPDUCT',response.data);
+            }
+        )
+        .catch(
+            error => console.log(error)
+        )
+        }
 }
 
 
@@ -29,6 +43,9 @@ const mutations = {
     SET_PRODUCTS(state, products) {
       state.products = products;
     },
+    SET_PROPDUCT(state,product){
+        state.product = product
+    }
   };
 
   export default {

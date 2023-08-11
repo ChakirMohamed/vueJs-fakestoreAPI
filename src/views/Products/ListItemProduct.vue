@@ -2,8 +2,8 @@
     <div>
         <div class="card">
             <div class="card-body">
-                <div class="" style="height: 300px;text-align: center; width: 100%;">
-                    <img :src="imgUrl" :alt="imgUrl" class="img-responsive">
+                <div class="" style="width: 100%;">
+                    <img :src="imgUrl" :alt="imgUrl" class="img-fluid">
                 </div>
                 <h4>{{ title }}</h4>
                 <span>{{ price }} $</span>
@@ -34,10 +34,13 @@ export default {
 
 <style scoped>
 img {
-height: auto;
-max-width: 100%;
+
+
 }
 .card-body{
-    overflow: hidden;
+    overflow: ;
+}
+.card{
+    height:500px;
 }
 </style>
